@@ -21,26 +21,26 @@ node {
             sh "mvn clean verify -Dtags='type:API'"
         } catch (err) {
 
-        } /*finally {
+        } finally {
             publishHTML (target: [
                     reportDir: 'target/site/serenity',
                     reportFiles: 'index.html',
                     reportName: "API tests report"
             ])
-        }*/
+        }
     }
     stage('UI') {
         try {
             sh "mvn clean verify -Dtags='type:UI'"
         } catch (err) {
 
-        } /*finally {
+        } finally {
             publishHTML (target: [
                     reportDir: 'target/site/serenity',
                     reportFiles: 'index.html',
                     reportName: "UI tests report"
             ])
-        }*/
+        }
     }
     stage('Results') {
         junit '**/target/failsafe-reports/*.xml'
