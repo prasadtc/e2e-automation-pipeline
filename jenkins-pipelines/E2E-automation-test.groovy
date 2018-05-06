@@ -8,12 +8,11 @@ node {
             sh "mvn clean verify -Dtags='type:Smoke'"
         } catch (err) {
 
-        } finally {
-            /*finally {
+        } /*finally {
             publishHTML (target: [
-            reportDir: 'target/site/serenity',
-            reportFiles: 'index.html',
-            reportName: "Smoke tests report"
+                    reportDir: 'target/site/serenity',
+                    reportFiles: 'index.html',
+                    reportName: "Smoke tests report"
             ])
         }*/
     }
@@ -24,9 +23,9 @@ node {
 
         } /*finally {
             publishHTML (target: [
-            reportDir: 'target/site/serenity',
-            reportFiles: 'index.html',
-            reportName: "API tests report"
+                    reportDir: 'target/site/serenity',
+                    reportFiles: 'index.html',
+                    reportName: "API tests report"
             ])
         }*/
     }
@@ -37,9 +36,9 @@ node {
 
         } /*finally {
             publishHTML (target: [
-            reportDir: 'target/site/serenity',
-            reportFiles: 'index.html',
-            reportName: "UI tests report"
+                    reportDir: 'target/site/serenity',
+                    reportFiles: 'index.html',
+                    reportName: "UI tests report"
             ])
         }*/
     }
